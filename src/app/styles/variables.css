@@ -1,0 +1,42 @@
+:root {
+  /* Light Theme - Default */
+  --primary-color: #415f91;
+  --on-primary-color: #ffffff;
+  --primary-container-color: #d6e3ff;
+  --on-primary-container-color: #284777;
+  --secondary-color: #565f71;
+  --on-secondary-color: #ffffff;
+  --surface-color: #f9f9ff;
+  --on-surface-color: #191c20;
+  --secondary-container-color: #dae2f9;
+  --on-secondary-container-color: #3e4759;
+  --outline-color: #74777f;
+  --background-color: #ededf4;
+  --on-background-color: #44474e;
+  --shadow-color: 0deg 0% 0%;
+
+  /* Typography & Effects */
+  --font-family-sans-serif: "Google Sans", "Google Sans Display", Helvetica, sans-serif;
+  --shadow-elevation-1: 0 1px 2px 0 hsl(var(--shadow-color) / 0.3), 0 1px 3px 1px hsl(var(--shadow-color) / 0.15);
+  --shadow-elevation-2: 0 1px 2px 0 hsl(var(--shadow-color) / 0.3), 0 2px 6px 2px hsl(var(--shadow-color) / 0.15);
+  --border-radius: 12px;
+  --transition-duration: 0.4s;
+}
+
+[data-theme='dark'] {
+  /* Dark Theme */
+  --primary-color: #aac7ff;
+  --on-primary-color: #0a305f;
+  --primary-container-color: #284777;
+  --on-primary-container-color: #d6e3ff;
+  --secondary-color: #bec6dc;
+  --on-secondary-color: #283141;
+  --surface-color: #111318;
+  --on-surface-color: #e2e2e9;
+  --secondary-container-color: #3e4759;
+  --on-secondary-container-color: #dae2f9;
+  --outline-color: #8e9099;
+  --background-color: #1d2024;
+  --on-background-color: #c4c6d0;
+  --shadow-color: 0deg 0% 50%; /* Lighter shadow for dark mode */
+}

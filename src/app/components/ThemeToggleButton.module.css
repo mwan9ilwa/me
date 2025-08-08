@@ -1,0 +1,41 @@
+.toggleButton {
+  background-color: transparent;
+  border: 0px solid var(--outline-color);
+  color: var(--on-secondary-container-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--transition-duration) ease, border-color var(--transition-duration) ease;
+  position: relative;
+}
+
+.toggleButton:hover {
+  background-color: var(--secondary-container-color);
+  border-color: var(--primary-color);
+}
+
+.toggleButton .tooltip {
+  visibility: hidden;
+  width: 80px;
+  background-color: var(--on-surface-color);
+  color: var(--surface-color);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.toggleButton:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

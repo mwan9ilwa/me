@@ -1,0 +1,39 @@
+.pageTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--on-secondary-container-color);
+  margin-bottom: 3rem;
+}
+
+.projectsList {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.projectCard {
+  background-color: var(--surface-color);
+  border: 1px solid var(--outline-color);
+  padding: 1.5rem 2rem;
+  border-radius: var(--border-radius);
+  transition: border-color var(--transition-duration) ease;
+}
+
+.projectCard:hover {
+  border-color: var(--primary-color);
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.projectDesc {
+  line-height: 1.6;
+  color: var(--on-secondary-container-color);
+}

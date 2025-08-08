@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--secondary-container-color);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: none;
+  opacity: 1;
+}
