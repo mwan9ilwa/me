@@ -1,39 +1,43 @@
-.pageTitle {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
+.section {
+  margin-bottom: 4rem;
 }
 
-.subtitle {
-  font-size: 1.2rem;
+.sectionTitle {
+  font-size: 2.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.intro {
+  line-height: 1.7;
   color: var(--on-secondary-container-color);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
 }
 
-.projectsList {
-  display: grid;
-  gap: 1.5rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
 }
 
-.projectCard {
-  background-color: var(--surface-color);
-  border: 1px solid var(--outline-color);
-  padding: 1.5rem 2rem;
-  border-radius: var(--border-radius);
-  transition: border-color var(--transition-duration) ease;
-}
-
-.projectCard:hover {
-  border-color: var(--primary-color);
-}
-
-.projectTitle {
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  margin-bottom: 0.75rem;
-}
-
-.projectDesc {
-  line-height: 1.6;
-  color: var(--on-secondary-container-color);
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
 }

@@ -16,19 +16,66 @@
   margin-bottom: 4rem;
 }
 
+.heroContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroDoodles {
+  flex: 0 0 300px;
+  position: relative;
+  height: 180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+}
+
+.aboutContent {
+  flex: 1;
+  max-width: 650px;
+}
+
+.aboutDoodles {
+  flex: 0 0 350px;
+  position: relative;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+}
+
 .heroTitle {
   font-size: 2.1rem;
   line-height: 1.2;
   color: var(--secondary-color);
   margin-bottom: 1rem;
   font-weight: 400;
-  max-width: 600px;
 }
 
 .heroSubtitle {
-  /* font-size: 1.2rem; */
   color: var(--on-secondary-container-color);
-  max-width: 600px;
 }
 
 .sectionTitle {
@@ -36,6 +83,90 @@
   color: var(--secondary-color);
   margin-bottom: 1.5rem;
   font-weight: 400;
+}
+
+/* Tech Icon Animations */
+.doodle1, .doodle2, .doodle3, .doodle4, .doodle5, .doodle6,
+.doodle7, .doodle8, .doodle9, .doodle10, .doodle11, .doodle12 {
+  opacity: 0.8;
+  animation: float 8s ease-in-out infinite;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.doodle1:hover, .doodle2:hover, .doodle3:hover, .doodle4:hover,
+.doodle5:hover, .doodle6:hover, .doodle7:hover, .doodle8:hover,
+.doodle9:hover, .doodle10:hover, .doodle11:hover, .doodle12:hover {
+  transform: scale(1.15) rotate(5deg);
+  opacity: 1;
+}
+
+.doodle2 { animation-delay: -1s; }
+.doodle3 { animation-delay: -2s; }
+.doodle4 { animation-delay: -3s; }
+.doodle5 { animation-delay: -4s; }
+.doodle6 { animation-delay: -5s; }
+.doodle7 { animation-delay: -6s; }
+.doodle8 { animation-delay: -7s; }
+.doodle9 { animation-delay: -1.5s; }
+.doodle10 { animation-delay: -2.5s; }
+.doodle11 { animation-delay: -3.5s; }
+.doodle12 { animation-delay: -4.5s; }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContainer, .aboutContainer {
+    flex-direction: column;
+  }
+  
+  .heroDoodles {
+    flex: none;
+    width: 100%;
+    height: 120px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .aboutDoodles {
+    flex: none;
+    width: 100%;
+    height: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .doodle1, .doodle2, .doodle3, .doodle4, .doodle5, .doodle6,
+  .doodle7, .doodle8, .doodle9, .doodle10, .doodle11, .doodle12 {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroDoodles {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 80px;
+  }
+  
+  .aboutDoodles {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 120px;
+  }
 }
 
 .section p {
@@ -100,12 +231,12 @@
   position: absolute;
   left: 0;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: lighter;
 }
 
 .jobTitle {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--on-surface-color);
   margin-bottom: 0.25rem;
 }
@@ -114,5 +245,5 @@
   font-size: 1rem;
   color: var(--primary-color);
   margin-bottom: 0.75rem;
-  font-weight: 500;
+  font-weight: 400;
 }
